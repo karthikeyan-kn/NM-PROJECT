@@ -11,8 +11,12 @@ from flask import Flask, request, jsonify
 import joblib
 import numpy as np
 import os
+from flask import Flask, request, jsonify
+from flask_cors import CORS  # <-- Add this line
 
 app = Flask(__name__)
+CORS(app, origins=["https://your-frontend-domain.com"])  # <-- Allow your frontend URL
+)
 
 # Load the model and preprocessing tools
 model = joblib.load("best_rf_model.joblib")
