@@ -16,7 +16,7 @@ from flask_cors import CORS  # <-- Add this line
 
 app = Flask(__name__)
 CORS(app, origins=["https://churn-predictor-web.onrender.com"])  # <-- Allow your frontend URL
-)
+
 
 # Load the model and preprocessing tools
 model = joblib.load("best_rf_model.joblib")
